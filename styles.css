@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #d8f3dc, #f8edeb) fixed;
+    background: linear-gradient(to bottom, #d8f3dc, #f8edeb);
     background-size: cover;
     color: #333;
     box-sizing: border-box;
@@ -29,7 +29,6 @@ header {
 
 footer {
     text-align: center;
-    padding: 20px;
     background: rgba(0, 0, 0, 0.05);
     color: #555;
     position: relative;
