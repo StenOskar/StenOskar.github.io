@@ -1,13 +1,24 @@
-/* Apply gradient background to the whole body */
-body {
-    font-family: 'Arial', sans-serif;
+/* Ensure the body and html cover the full height */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: linear-gradient(to bottom, #d8f3dc, #f8edeb);
-    background-attachment: fixed; /* Optional: Keeps the background fixed during scroll */
-    background-size: cover; /* Ensures the gradient covers the entire viewport */
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #d8f3dc, #f8edeb) fixed;
+    background-size: cover;
     color: #333;
+    box-sizing: border-box;
+}
+
+/* Ensure all sections take their full content height */
+section {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); /
 }
 
 header {
@@ -16,42 +27,16 @@ header {
     color: #005f73;
 }
 
-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 20px auto;
-    display: block;
-}
-
-section {
-    max-width: 800px;
-    margin: auto;
-    padding: 50px 20px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* Optional: Adds a slight white overlay for readability */
-    border-radius: 10px; /* Optional: Smoothens edges */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #023047;
-}
-
-.project-item {
-    background: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-}
-
 footer {
     text-align: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.05);
     color: #555;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+header, section, footer {
+    min-height: 100vh;
 }
