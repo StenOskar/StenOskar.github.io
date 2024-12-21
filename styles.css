@@ -91,12 +91,12 @@ footer {
 
 .social-links ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .social-links li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 
 
