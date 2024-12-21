@@ -1,37 +1,96 @@
-/* Ensure the body and html cover the full height */
+/* Global resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html, body {
     height: 100%;
-    margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #d8f3dc, #f8edeb);
-    background-size: cover;
     color: #333;
-    box-sizing: border-box;
 }
 
-/* Ensure all sections take their full content height */
-section {
-    max-width: 800px;
-    margin: auto;
-    padding: 50px 20px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: calc(100% - 40px);
+/* Subtle angled gradient background */
+body {
+    background: linear-gradient(120deg, #f8edeb, #d8f3dc 60%, #f8edeb);
 }
 
-header {
-    text-align: center;
-    padding: 100px 0;
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem; /* lots of vertical spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
     color: #005f73;
 }
 
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Hero image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Section styling */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+section p, section .project-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    background: rgba(0, 0, 0, 0.05);
-    color: #555;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 1.5rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        margin-top: 2rem;
+    }
 }
